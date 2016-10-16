@@ -1,3 +1,4 @@
+[tag_Name_cfrias_ansible_control_server_n1]
 [tag_Name_cfrias_1601_edge_ol68_dc1_n1]
 [tag_Name_cfrias_1601_edge_ol68_dc1_n2]
 [tag_Name_cfrias_1601_edge_ol68_dc1_n3]
@@ -10,6 +11,9 @@
 [tag_Name_cfrias_1601_edge_ol68_dc1_n10]
 [tag_Name_cfrias_1601_edge_ol68_dc1_n11]
 [tag_Name_cfrias_1601_edge_ol68_dc1_n12]
+
+[control:children]
+tag_Name_cfrias_ansible_control_server_n1
 
 [tag_Name_cfrias_1601_edge_ol68_dc1_n3:vars]
 zk_observer=true
