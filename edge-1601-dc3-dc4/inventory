@@ -25,7 +25,7 @@
 [tag_Name_edge_1601_dc4_n12]
 
 [tag_Name_edge_1601_dc3_n0:vars]
-ansible_user = centos
+ansible_user=centos
 
 [tag_Name_edge_1601_dc3_n3:vars]
 zk_observer=true
