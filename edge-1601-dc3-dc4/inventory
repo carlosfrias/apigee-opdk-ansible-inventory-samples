@@ -1,4 +1,3 @@
-[tag_Name_edge_1601_dc3_n0]
 [tag_Name_edge_1601_dc3_n1]
 [tag_Name_edge_1601_dc3_n2]
 [tag_Name_edge_1601_dc3_n3]
@@ -23,9 +22,6 @@
 [tag_Name_edge_1601_dc4_n10]
 [tag_Name_edge_1601_dc4_n11]
 [tag_Name_edge_1601_dc4_n12]
-
-[tag_Name_edge_1601_dc3_n0:vars]
-ansible_user=centos
 
 [tag_Name_edge_1601_dc3_n3:vars]
 zk_observer=true
