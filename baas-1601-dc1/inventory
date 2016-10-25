@@ -1,4 +1,3 @@
-[tag_Name_baas_1601_dc1_n0]
 [tag_Name_baas_1601_dc1_n1]
 [tag_Name_baas_1601_dc1_n2]
 [tag_Name_baas_1601_dc1_n3]
@@ -9,9 +8,6 @@
 [tag_Name_baas_1601_dc1_n8]
 [tag_Name_baas_1601_dc1_n9]
 [tag_Name_baas_1601_dc1_n10]
-
-[control-server:children]
-tag_Name_baas_1601_dc1_n0
 
 [planet:children]
 dc-1
