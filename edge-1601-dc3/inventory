@@ -3,7 +3,6 @@
 [tag_Name_dc3_n3]
 [tag_Name_dc3_n4]
 [tag_Name_dc3_n5]
-[tag_Name_dc3_n6]
 
 [planet:children]
 dc-1
@@ -73,6 +72,3 @@ dc-1-pgstandby
 
 [dc-1-pgstandby:children]
 tag_Name_dc3_n5
-
-[mirror:children]
-tag_Name_dc3_n6
