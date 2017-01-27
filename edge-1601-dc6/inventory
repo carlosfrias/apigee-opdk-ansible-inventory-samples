@@ -90,8 +90,8 @@ tag_Name_dc6_n12
 dc-2-pg
 
 [dc-2-pg:children]
-tag_Name_dc6_n13
-tag_Name_dc6_n14
+dc-2-pgmaster
+dc-2-pgstandby
 
 [pgmaster:children]
 dc-2-pgmaster

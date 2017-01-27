@@ -61,8 +61,8 @@ tag_Name_dc2_n5
 dc-1-pg
 
 [dc-1-pg:children]
-tag_Name_dc2_n4
-tag_Name_dc2_n5
+dc-1-pgmaster
+dc-1-pgstandby
 
 [pgmaster:children]
 dc-1-pgmaster

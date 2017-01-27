@@ -103,8 +103,8 @@ tag_Name_dc1_n19
 dc-1-pg
 
 [dc-1-pg:children]
-pgmaster
-pgstandby
+dc-1-pgmaster
+dc-1-pgstandby
 
 [pgmaster:children]
 dc-1-pgmaster

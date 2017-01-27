@@ -70,8 +70,8 @@ tag_Name_dc4_n8
 dc-2-pg
 
 [dc-2-pg:children]
-tag_Name_dc4_n9
-tag_Name_dc4_n10
+dc-2-pgmaster
+dc-2-pgstandby
 
 [pgmaster:children]
 dc-2-pgmaster

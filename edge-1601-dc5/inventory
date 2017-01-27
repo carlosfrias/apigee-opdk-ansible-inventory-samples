@@ -90,8 +90,8 @@ tag_Name_dc5_n12
 dc-1-pg
 
 [dc-1-pg:children]
-tag_Name_dc5_n13
-tag_Name_dc5_n14
+dc-1-pgmaster
+dc-1-pgstandby
 
 [pgmaster:children]
 dc-1-pgmaster
