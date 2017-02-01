@@ -62,9 +62,9 @@
 52.23.172.34
 
 [planet:children]
-dc-2
+dc-1
 
-[dc-2:children]
+[dc-1:children]
 tag_Name_dc1_n1
 tag_Name_dc1_n2
 tag_Name_dc1_n3
@@ -88,9 +88,9 @@ tag_Name_dc1_n20
 tag_Name_dc1_n21
 
 [ds:children]
-dc-2-ds
+dc-1-ds
 
-[dc-2-ds:children]
+[dc-1-ds:children]
 tag_Name_dc1_n3
 tag_Name_dc1_n4
 tag_Name_dc1_n5
@@ -101,30 +101,30 @@ tag_Name_dc1_n9
 tag_Name_dc1_n10
 
 [ms:children]
-dc-2-ms
+dc-1-ms
 
-[dc-2-ms:children]
+[dc-1-ms:children]
 tag_Name_dc1_n1
 tag_Name_dc1_n2
 
 [ui:children]
-dc-2-ui
+dc-1-ui
 
-[dc-2-ui:children]
+[dc-1-ui:children]
 tag_Name_dc1_n1
 tag_Name_dc1_n2
 
 [ldap:children]
-dc-2-ldap
+dc-1-ldap
 
-[dc-2-ldap:children]
+[dc-1-ldap:children]
 tag_Name_dc1_n1
 tag_Name_dc1_n2
 
 [rmp:children]
-dc-2-rmp
+dc-1-rmp
 
-[dc-2-rmp:children]
+[dc-1-rmp:children]
 tag_Name_dc1_n11
 tag_Name_dc1_n12
 tag_Name_dc1_n13
@@ -134,27 +134,27 @@ tag_Name_dc1_n16
 tag_Name_dc1_n17
 
 [qpid:children]
-dc-2-qpid
+dc-1-qpid
 
-[dc-2-qpid:children]
+[dc-1-qpid:children]
 tag_Name_dc1_n18
 tag_Name_dc1_n19
 
 [pg:children]
-dc-2-pg
+dc-1-pg
 
-[dc-2-pg:children]
-dc-2-pgmaster
-dc-2-pgstandby
+[dc-1-pg:children]
+dc-1-pgmaster
+dc-1-pgstandby
 
 [pgmaster:children]
-dc-2-pgmaster
+dc-1-pgmaster
 
-[dc-2-pgmaster:children]
+[dc-1-pgmaster:children]
 tag_Name_dc1_n20
 
 [pgstandby:children]
-dc-2-pgstandby
+dc-1-pgstandby
 
-[dc-2-pgstandby:children]
+[dc-1-pgstandby:children]
 tag_Name_dc1_n21
