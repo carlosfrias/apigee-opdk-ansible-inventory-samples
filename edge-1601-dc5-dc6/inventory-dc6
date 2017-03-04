@@ -12,15 +12,13 @@
 [tag_Name_dc6_n12]
 [tag_Name_dc6_n13]
 [tag_Name_dc6_n14]
-
-[tag_Name_dc6_n3:vars]
-zk_observer=true
-
-[tag_Name_dc6_n4:vars]
-zk_observer=true
-
-[tag_Name_dc6_n5:vars]
-zk_observer=true
+[tag_Name_dc6_n15]
+[tag_Name_dc6_n16]
+[tag_Name_dc6_n17]
+[tag_Name_dc6_n18]
+[tag_Name_dc6_n19]
+[tag_Name_dc6_n20]
+[tag_Name_dc6_n21]
 
 [planet:children]
 dc-2
@@ -40,51 +38,66 @@ tag_Name_dc6_n11
 tag_Name_dc6_n12
 tag_Name_dc6_n13
 tag_Name_dc6_n14
+tag_Name_dc6_n15
+tag_Name_dc6_n16
+tag_Name_dc6_n17
+tag_Name_dc6_n18
+tag_Name_dc6_n19
+tag_Name_dc6_n20
+tag_Name_dc6_n21
 
 [ds:children]
 dc-2-ds
 
 [dc-2-ds:children]
-tag_Name_dc6_n1
-tag_Name_dc6_n2
 tag_Name_dc6_n3
 tag_Name_dc6_n4
 tag_Name_dc6_n5
 tag_Name_dc6_n6
 tag_Name_dc6_n7
 tag_Name_dc6_n8
+tag_Name_dc6_n9
+tag_Name_dc6_n10
 
 [ms:children]
 dc-2-ms
 
 [dc-2-ms:children]
 tag_Name_dc6_n1
+tag_Name_dc6_n2
 
 [ui:children]
 dc-2-ui
 
 [dc-2-ui:children]
 tag_Name_dc6_n1
+tag_Name_dc6_n2
 
 [ldap:children]
 dc-2-ldap
 
 [dc-2-ldap:children]
 tag_Name_dc6_n1
+tag_Name_dc6_n2
 
 [rmp:children]
 dc-2-rmp
 
 [dc-2-rmp:children]
-tag_Name_dc6_n9
-tag_Name_dc6_n10
+tag_Name_dc6_n11
+tag_Name_dc6_n12
+tag_Name_dc6_n13
+tag_Name_dc6_n14
+tag_Name_dc6_n15
+tag_Name_dc6_n16
+tag_Name_dc6_n17
 
 [qpid:children]
 dc-2-qpid
 
 [dc-2-qpid:children]
-tag_Name_dc6_n11
-tag_Name_dc6_n12
+tag_Name_dc6_n18
+tag_Name_dc6_n19
 
 [pg:children]
 dc-2-pg
@@ -97,10 +110,10 @@ dc-2-pgstandby
 dc-2-pgmaster
 
 [dc-2-pgmaster:children]
-tag_Name_dc6_n13
+tag_Name_dc6_n20
 
 [pgstandby:children]
 dc-2-pgstandby
 
 [dc-2-pgstandby:children]
-tag_Name_dc6_n14
+tag_Name_dc6_n21
