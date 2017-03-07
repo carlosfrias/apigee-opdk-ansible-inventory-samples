@@ -1,0 +1,13 @@
+[tag_Name_dc7_n21]
+
+[planet:children]
+dc-1
+
+[dc-1:children]
+tag_Name_dc7_n21
+
+[portal:children]
+dc-1-portal
+
+[dc-1-portal:children]
+tag_Name_dc7_n21
