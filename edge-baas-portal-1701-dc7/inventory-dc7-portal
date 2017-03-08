@@ -6,8 +6,8 @@ dc-1
 [dc-1:children]
 tag_Name_dc7_n21
 
-[portal:children]
-dc-1-portal
+[devportal:children]
+dc-1-devportal
 
-[dc-1-portal:children]
+[dc-1-devportal:children]
 tag_Name_dc7_n21
