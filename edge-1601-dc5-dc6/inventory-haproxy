@@ -1,9 +1,12 @@
 [tag_Name_dc2_n22]
 [tag_Name_dc2_n23]
 
-[planet:children]
+[planet_ha:children]
 tag_Name_dc2_n22
 tag_Name_dc2_n23
 
 [haproxy:children]
+tag_Name_dc2_n21
+
+[haproxy2:children]
 tag_Name_dc2_n23
