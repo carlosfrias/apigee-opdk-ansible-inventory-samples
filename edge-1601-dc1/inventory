@@ -49,6 +49,9 @@ tag_Name_dc1_n21
 [ds:children]
 dc-1-ds
 
+[tag_Name_dc1_n3:vars]
+zk_observer=true
+
 [dc-1-ds:children]
 tag_Name_dc1_n3
 tag_Name_dc1_n4
