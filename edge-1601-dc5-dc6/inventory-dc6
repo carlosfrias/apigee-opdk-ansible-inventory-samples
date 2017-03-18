@@ -48,7 +48,26 @@ tag_Name_dc6_n21
 
 [ds:children]
 dc-2-ds
-[tag_Name_dc6_n3:vars]
+
+[tag_Name_dc6_n4:vars]
+zk_observer=true
+
+[tag_Name_dc6_n5:vars]
+zk_observer=true
+
+[tag_Name_dc6_n6:vars]
+zk_observer=true
+
+[tag_Name_dc6_n7:vars]
+zk_observer=true
+
+[tag_Name_dc6_n8:vars]
+zk_observer=true
+
+[tag_Name_dc6_n9:vars]
+zk_observer=true
+
+[tag_Name_dc6_n10:vars]
 zk_observer=true
 
 [dc-2-ds:children]

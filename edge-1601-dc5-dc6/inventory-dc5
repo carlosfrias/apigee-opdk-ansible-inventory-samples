@@ -46,6 +46,24 @@ tag_Name_dc5_n19
 tag_Name_dc5_n20
 tag_Name_dc5_n21
 
+[tag_Name_dc5_n5:vars]
+zk_observer=true
+
+[tag_Name_dc5_n6:vars]
+zk_observer=true
+
+[tag_Name_dc5_n7:vars]
+zk_observer=true
+
+[tag_Name_dc5_n8:vars]
+zk_observer=true
+
+[tag_Name_dc5_n9:vars]
+zk_observer=true
+
+[tag_Name_dc5_n10:vars]
+zk_observer=true
+
 [ds:children]
 dc-1-ds
 
