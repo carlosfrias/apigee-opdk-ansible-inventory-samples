@@ -1,7 +1,4 @@
 [tag_Name_dc10_n1]
 
-[planet:children]
-haproxy
-
 [haproxy:children]
 tag_Name_dc10_n1
