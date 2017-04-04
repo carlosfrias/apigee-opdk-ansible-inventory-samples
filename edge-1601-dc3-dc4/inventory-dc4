@@ -3,11 +3,6 @@
 [tag_Name_dc4_n3]
 [tag_Name_dc4_n4]
 [tag_Name_dc4_n5]
-[tag_Name_dc4_n6]
-[tag_Name_dc4_n7]
-[tag_Name_dc4_n8]
-[tag_Name_dc4_n9]
-[tag_Name_dc4_n10]
 
 [planet:children]
 dc-2
@@ -18,54 +13,46 @@ tag_Name_dc4_n2
 tag_Name_dc4_n3
 tag_Name_dc4_n4
 tag_Name_dc4_n5
-tag_Name_dc4_n6
-tag_Name_dc4_n7
-tag_Name_dc4_n8
-tag_Name_dc4_n9
-tag_Name_dc4_n10
 
 [ds:children]
 dc-2-ds
 
 [dc-2-ds:children]
-tag_Name_dc4_n1
 tag_Name_dc4_n2
 tag_Name_dc4_n3
-
-[tag_Name_dc4_n3:vars]
-zk_observer=true
+tag_Name_dc4_n4
 
 [ms:children]
 dc-2-ms
 
 [dc-2-ms:children]
-tag_Name_dc4_n4
+tag_Name_dc4_n1
 
 [ui:children]
 dc-2-ui
 
 [dc-2-ui:children]
-tag_Name_dc4_n4
+tag_Name_dc4_n1
 
 [ldap:children]
 dc-2-ldap
 
 [dc-2-ldap:children]
-tag_Name_dc4_n4
+tag_Name_dc4_n1
 
 [rmp:children]
 dc-2-rmp
 
 [dc-2-rmp:children]
-tag_Name_dc4_n5
-tag_Name_dc4_n6
+tag_Name_dc4_n3
+tag_Name_dc4_n4
 
 [qpid:children]
 dc-2-qpid
 
 [dc-2-qpid:children]
-tag_Name_dc4_n7
-tag_Name_dc4_n8
+tag_Name_dc4_n4
+tag_Name_dc4_n5
 
 [pg:children]
 dc-2-pg
@@ -78,10 +65,10 @@ dc-2-pgstandby
 dc-2-pgmaster
 
 [dc-2-pgmaster:children]
-tag_Name_dc4_n9
+tag_Name_dc4_n4
 
 [pgstandby:children]
 dc-2-pgstandby
 
 [dc-2-pgstandby:children]
-tag_Name_dc4_n10
+tag_Name_dc4_n5
