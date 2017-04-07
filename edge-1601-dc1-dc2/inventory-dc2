@@ -3,11 +3,6 @@
 [tag_Name_dc2_n3]
 [tag_Name_dc2_n4]
 [tag_Name_dc2_n5]
-[tag_Name_dc2_n6]
-[tag_Name_dc2_n7]
-[tag_Name_dc2_n8]
-[tag_Name_dc2_n9]
-[tag_Name_dc2_n10]
 
 [planet:children]
 dc-2
@@ -18,21 +13,16 @@ tag_Name_dc2_n2
 tag_Name_dc2_n3
 tag_Name_dc2_n4
 tag_Name_dc2_n5
-tag_Name_dc2_n6
-tag_Name_dc2_n7
-tag_Name_dc2_n8
-tag_Name_dc2_n9
-tag_Name_dc2_n10
 
 [ds:children]
 dc-2-ds
 
 [dc-2-ds:children]
+tag_Name_dc2_n1
 tag_Name_dc2_n2
 tag_Name_dc2_n3
-tag_Name_dc2_n4
 
-[tag_Name_dc2_n4:vars]
+[tag_Name_dc2_n3:vars]
 zk_observer = true
 
 [ms:children]
@@ -57,15 +47,15 @@ tag_Name_dc2_n1
 dc-2-rmp
 
 [dc-2-rmp:children]
-tag_Name_dc2_n5
-tag_Name_dc2_n6
+tag_Name_dc2_n3
+tag_Name_dc2_n4
 
 [qpid:children]
 dc-2-qpid
 
 [dc-2-qpid:children]
-tag_Name_dc2_n7
-tag_Name_dc2_n8
+tag_Name_dc2_n4
+tag_Name_dc2_n5
 
 [pg:children]
 dc-2-pg
@@ -78,10 +68,10 @@ dc-2-pgstandby
 dc-2-pgmaster
 
 [dc-2-pgmaster:children]
-tag_Name_dc2_n9
+tag_Name_dc2_n4
 
 [pgstandby:children]
 dc-2-pgstandby
 
 [dc-2-pgstandby:children]
-tag_Name_dc2_n10
+tag_Name_dc2_n5
