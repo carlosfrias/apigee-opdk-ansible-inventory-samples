@@ -22,9 +22,6 @@ tag_Name_dc2_n1
 tag_Name_dc2_n2
 tag_Name_dc2_n3
 
-[tag_Name_dc2_n3:vars]
-zk_observer = true
-
 [ms:children]
 dc-2-ms
 
@@ -47,8 +44,8 @@ tag_Name_dc2_n1
 dc-2-rmp
 
 [dc-2-rmp:children]
+tag_Name_dc2_n2
 tag_Name_dc2_n3
-tag_Name_dc2_n4
 
 [qpid:children]
 dc-2-qpid

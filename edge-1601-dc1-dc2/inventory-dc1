@@ -44,8 +44,8 @@ tag_Name_dc1_n1
 dc-1-rmp
 
 [dc-1-rmp:children]
+tag_Name_dc1_n2
 tag_Name_dc1_n3
-tag_Name_dc1_n4
 
 [qpid:children]
 dc-1-qpid
