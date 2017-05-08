@@ -243,7 +243,7 @@ class Ec2Inventory(object):
             self.hostname_variable = None
 
         if config.has_option('ec2', 'destination_format') and \
-                config.has_option('ec2', 'destination_format_tags'):
+            config.has_option('ec2', 'destination_format_tags'):
             self.destination_format = config.get('ec2', 'destination_format')
             self.destination_format_tags = config.get('ec2', 'destination_format_tags').split(',')
         else:
@@ -255,7 +255,7 @@ class Ec2Inventory(object):
         self.route53_excluded_zones = []
         if config.has_option('ec2', 'route53_excluded_zones'):
             self.route53_excluded_zones.extend(
-                    config.get('ec2', 'route53_excluded_zones', '').split(','))
+                config.get('ec2', 'route53_excluded_zones', '').split(','))
 
         # Include RDS instances?
         self.rds_enabled = True
@@ -621,7 +621,7 @@ class Ec2Inventory(object):
         '''log an error to std err for ansible-playbook to consume and exit'''
         if err_operation:
             err_msg = 'ERROR: "{err_msg}", while: {err_operation}'.format(
-                    err_msg=err_msg, err_operation=err_operation)
+                err_msg=err_msg, err_operation=err_operation)
         sys.stderr.write(err_msg)
         sys.exit(1)
 
