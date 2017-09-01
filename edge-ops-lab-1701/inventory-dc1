@@ -1,33 +1,27 @@
 [dc-1-ds]
-10.142.0.7
-10.142.0.13
 10.142.0.14
+10.142.0.[8:9]
 
 [dc-1-ms]
-10.142.0.9
+10.142.0.5
 
 [dc-1-ui]
-10.142.0.9
+10.142.0.5
 
 [dc-1-ldap]
-10.142.0.9
+10.142.0.5
 
 [dc-1-rmp]
-10.142.0.5
-10.142.0.8
+10.142.0.[10:11]
 
 [dc-1-qpid]
-10.142.0.10
-10.142.0.14
+10.142.0.13
+10.142.0.7
 
 [dc-1-pg:children]
 dc-1-pgmaster
-dc-1-pgstandby
 
 [dc-1-pgmaster]
-10.142.0.11
-
-[dc-1-pgstandby]
 10.142.0.15
 
 [planet:children]
@@ -62,9 +56,3 @@ dc-1-qpid
 
 [pg:children]
 dc-1-pg
-
-[pgmaster:children]
-dc-1-pgmaster
-
-[pgstandby:children]
-dc-1-pgstandby
