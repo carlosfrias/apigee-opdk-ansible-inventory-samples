@@ -1,0 +1,14 @@
+[telegraf]
+cf-00[1:9]
+cf-01[1:2]
+
+[grafana]
+cf-013
+
+[influxdb]
+cf-014
+
+[dc-1:children]
+telegraf
+grafana
+influxdb
