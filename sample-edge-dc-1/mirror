@@ -1,3 +1,5 @@
 [cfmirror]
 cf-000
 
+[dc-1:children]
+cfmirror
