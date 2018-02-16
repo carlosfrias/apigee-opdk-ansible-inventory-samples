@@ -1,19 +1,12 @@
 [dc-1-dp-ui]
 cf-011
 
-[dc-1-dp-pgmaster]
-cf-011
-
-[dc-1-dp-pgstandby]
-cf-012
-
 [dc-1-dp-db]
-dc-1-dp-pgmaster
-dc-1-dp-pgstandby
+cf-011
 
 [dc-1-dp]
 dc-1-dp-ui
-dc-1-db-db
+dc-1-dp-db
 
 [planet]
 dc-1-dp
@@ -28,4 +21,4 @@ dc-1-dp-ui
 dc-1-dp-db
 
 [dc-1:children]
-dp
+dc-1-dp
