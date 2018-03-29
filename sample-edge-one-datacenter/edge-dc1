@@ -39,13 +39,6 @@ dc-1
 
 [dc-1:children]
 dc-1-edge
-dc-1-ds
-dc-1-ms
-dc-1-ldap
-dc-1-ui
-dc-1-rmp
-dc-1-qpid
-dc-1-pg
 
 [edge:children]
 dc-1-edge
