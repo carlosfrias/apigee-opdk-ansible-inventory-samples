@@ -4,6 +4,10 @@ cf-007
 [dc-1-edge-sso-pg]
 cf-008
 
+[sso:children]
+dc-1-edge-sso
+dc-1-edge-sso-pg
+
 [dc-1:children]
 dc-1-edge-sso
 dc-1-edge-sso-pg
