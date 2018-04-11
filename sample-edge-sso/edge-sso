@@ -8,6 +8,9 @@ cf-008
 dc-1-edge-sso
 dc-1-edge-sso-pg
 
+[sso-pg:children]
+dc-1-edge-sso-pg
+
 [dc-1:children]
 dc-1-edge-sso
 dc-1-edge-sso-pg
