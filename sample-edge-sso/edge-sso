@@ -2,7 +2,7 @@
 cf-007
 
 [dc-1-edge-sso-pg]
-cf-008
+cf-007
 
 [sso:children]
 dc-1-edge-sso
