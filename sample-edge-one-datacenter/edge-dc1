@@ -46,17 +46,17 @@ dc-1-edge
 [ms:children]
 dc-1-ms
 
-[ui:children]
-dc-1-ui
+#[ui:children]
+#dc-1-ui
 
-[dc-1-ui:children]
-dc-1-ms
+#[dc-1-ui:children]
+#dc-1-ms
 
-[ldap:children]
-dc-1-ldap
+#[ldap:children]
+#dc-1-ldap
 
-[dc-1-ldap:children]
-dc-1-ms
+#[dc-1-ldap:children]
+#dc-1-ms
 
 [ds:children]
 dc-1-ds
