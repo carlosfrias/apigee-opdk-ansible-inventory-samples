@@ -4,6 +4,9 @@
 [planet:children]
 dc-1
 
+[edge:children]
+aio
+
 [dc-1:children]
 aio
 
@@ -44,7 +47,7 @@ dc-1-qpid
 aio
 
 [pg:children]
-pg
+dc-1-pg
 
 [dc-1-pg:children]
 aio
