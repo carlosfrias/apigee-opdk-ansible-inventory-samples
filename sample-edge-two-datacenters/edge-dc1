@@ -23,9 +23,6 @@ cf-00[7:8]
 [dc-1-pgmaster]
 cf-009
 
-[dc-1-pgstandby]
-cf-010
-
 [planet:children]
 dc-1
 
@@ -71,10 +68,7 @@ dc-1-pg
 
 [dc-1-pg:children]
 dc-1-pgmaster
-dc-1-pgstandby
 
 [pgmaster:children]
 dc-1-pgmaster
 
-[pgstandby:children]
-dc-1-pgstandby
