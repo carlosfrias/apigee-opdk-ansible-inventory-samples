@@ -1,37 +1,30 @@
-[dc-2-edge]
-cf-00[1:9]
-cf-010
-
 [dc-2-ds]
-cf-00[1:2]
-cf-003 zk_observer=true
+cf-00[5:7]
+cf-007 zk_observer=true
 
 [dc-2-ms]
-cf-004
+cf-005
 
 [dc-2-ldap]
-cf-004
+cf-005
 
 [dc-2-ui]
-cf-004
+cf-005
 
 [dc-2-rmp]
-cf-00[5:6]
-
-[dc-2-qpid]
 cf-00[7:8]
 
-[dc-2-pgmaster]
-cf-009
+[dc-2-qpid]
+cf-00[8:9]
 
 [dc-2-pgstandby]
-cf-010
+cf-009
 
-[planet:children]
-dc-2
+[dc-2-pg:children]
+dc-2-pgstandby
 
-[dc-2:children]
-dc-2-edge
+# Group mappings for the nodes indicated above
+[dc-2-edge:children]
 dc-2-ds
 dc-2-ms
 dc-2-ldap
@@ -42,6 +35,12 @@ dc-2-pg
 
 [edge:children]
 dc-2-edge
+
+[dc-2:children]
+edge
+
+[planet:children]
+dc-2
 
 [ms:children]
 dc-2-ms
@@ -55,9 +54,6 @@ dc-2-ms
 [ldap:children]
 dc-2-ldap
 
-[dc-2-ldap:children]
-dc-2-ms
-
 [ds:children]
 dc-2-ds
 
@@ -69,13 +65,6 @@ dc-2-qpid
 
 [pg:children]
 dc-2-pg
-
-[dc-2-pg:children]
-dc-2-pgmaster
-dc-2-pgstandby
-
-[pgmaster:children]
-dc-2-pgmaster
 
 [pgstandby:children]
 dc-2-pgstandby
