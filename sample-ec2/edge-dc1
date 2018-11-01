@@ -70,5 +70,3 @@ dc-1-pgstandby
 [pgmaster:children]
 dc-1-pgmaster
 
-[pgstandby:children]
-dc-1-pgstandby
