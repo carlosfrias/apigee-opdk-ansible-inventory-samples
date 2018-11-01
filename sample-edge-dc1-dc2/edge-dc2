@@ -37,7 +37,7 @@ dc-2-pg
 dc-2-edge
 
 [dc-2:children]
-edge
+dc-2-edge
 
 [planet:children]
 dc-2
