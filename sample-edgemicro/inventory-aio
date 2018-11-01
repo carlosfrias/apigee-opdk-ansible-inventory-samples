@@ -1,11 +1,14 @@
 [aio]
 0.0.0.0
 
-[planet:children]
-dc-1
-
 [dc-1:children]
 aio
+
+[edge:children]
+aio
+
+[planet:children]
+dc-1
 
 [ds:children]
 dc-1-ds
@@ -18,18 +21,6 @@ dc-1-ms
 
 [dc-1-ms:children]
 aio
-
-[ui:children]
-dc-1-ui
-
-[dc-1-ui:children]
-dc-1-ms
-
-[ldap:children]
-dc-1-ldap
-
-[dc-1-ldap:children]
-dc-1-ms
 
 [rmp:children]
 dc-1-rmp
@@ -44,7 +35,7 @@ dc-1-qpid
 aio
 
 [pg:children]
-pg
+dc-1-pg
 
 [dc-1-pg:children]
 aio

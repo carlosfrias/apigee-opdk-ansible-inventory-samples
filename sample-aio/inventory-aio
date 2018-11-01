@@ -1,14 +1,14 @@
 [aio]
 0.0.0.0
 
-[planet:children]
-dc-1
+[dc-1:children]
+aio
 
 [edge:children]
 aio
 
-[dc-1:children]
-aio
+[planet:children]
+dc-1
 
 [ds:children]
 dc-1-ds

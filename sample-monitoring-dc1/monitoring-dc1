@@ -1,12 +1,11 @@
 [telegraf]
-cf-00[1:9]
-cf-01[1:2]
+cf-00[0:4]
 
 [grafana]
-cf-013
+cf-001
 
 [influxdb]
-cf-014
+cf-002
 
 [dc-1:children]
 telegraf

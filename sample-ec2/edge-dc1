@@ -5,26 +5,16 @@
 [tag_Name_dc_1_pgmaster]
 [tag_Name_dc_1_pgstandby]
 
-[dc-1-edge:children]
-tag_Name_dc_1_ds
-tag_Name_dc_1_ms
-tag_Name_dc_1_rmp
-tag_Name_dc_1_qpid
-tag_Name_dc_1_pgmaster
-tag_Name_dc_1_pgstandby
-
 [dc-1-ds:children]
 tag_Name_dc_1_ds
 
-# Setting an observer Zookeeper node
-# tag_Name_dc_1_zk_observer zk_observer=true
-
-# Setting Cassandra with Rack Aware Settings
-# cf-001 rack=1,1
-# cf-002 rack=1,2
-# cf-003 rack=1,3
-
 [dc-1-ms:children]
+tag_Name_dc_1_ms
+
+[dc-1-ldap:children]
+tag_Name_dc_1_ms
+
+[dc-1-ui:children]
 tag_Name_dc_1_ms
 
 [dc-1-rmp:children]
@@ -39,17 +29,40 @@ tag_Name_dc_1_pgmaster
 [dc-1-pgstandby:children]
 tag_Name_dc_1_pgstandby
 
-[planet:children]
-dc-1
+[dc-1-pg:children]
+dc-1-pgmaster
+dc-1-pgstandby
 
-[dc-1:children]
-dc-1-edge
+# Group mappings for the nodes indicated above
+[dc-1-edge:children]
+dc-1-ds
+dc-1-ms
+dc-1-ldap
+dc-1-ui
+dc-1-rmp
+dc-1-qpid
+dc-1-pg
 
 [edge:children]
 dc-1-edge
 
+[dc-1:children]
+dc-1-edge
+
+[planet:children]
+dc-1
+
 [ms:children]
 dc-1-ms
+
+[ui:children]
+dc-1-ui
+
+[dc-1-ui:children]
+dc-1-ms
+
+[ldap:children]
+dc-1-ldap
 
 [ds:children]
 dc-1-ds
@@ -63,10 +76,8 @@ dc-1-qpid
 [pg:children]
 dc-1-pg
 
-[dc-1-pg:children]
-dc-1-pgmaster
-dc-1-pgstandby
-
 [pgmaster:children]
 dc-1-pgmaster
 
+[pgstandby:children]
+dc-1-pgstandby
