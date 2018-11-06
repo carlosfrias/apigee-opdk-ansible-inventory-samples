@@ -1,0 +1,5 @@
+[mirror]
+cf-005
+
+[dc-1:children]
+mirror
