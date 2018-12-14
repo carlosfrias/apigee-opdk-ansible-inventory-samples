@@ -1,40 +1,59 @@
-[dc-1-edge]
-cf-00[0:4]
-
+# Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
 cf-00[0:2]
 
-# Setting an observer Zookeeper node
+# This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
 # cf-003 zk_observer=true
 
-# Setting Cassandra with Rack Aware Settings
+# This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
 # cf-001 rack=1,1
 # cf-002 rack=1,2
 # cf-003 rack=1,3
 
+# Inventory Group for nodes that fulfill Management Server Roles
 [dc-1-ms]
 cf-000
 
+# Inventory Group for nodes that fulfill LDAP Roles
 [dc-1-ldap]
 cf-000
 
+# Inventory Group for nodes that fulfill UI Roles
 [dc-1-ui]
 cf-000
 
+# Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-1-rmp]
 cf-00[1:2]
 
+# Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-1-qpid]
 cf-00[3:4]
 
+# Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
 [dc-1-pgmaster]
+cf-003
+
+# Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
+[dc-1-pgstandby]
 cf-004
 
-[planet:children]
-dc-1
+# Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
+# If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
+[dc-1-pg:children]
+dc-1-pgmaster
+dc-1-pgstandby
 
-[dc-1:children]
-dc-1-edge
+# Inventory Group must be removed if no Postgres Master is defined
+[pgmaster:children]
+dc-1-pgmaster
+
+# Inventory Group must be removed if no Postgres Standby is defined
+[pgstandby:children]
+dc-1-pgstandby
+
+# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
+[dc-1-edge:children]
 dc-1-ds
 dc-1-ms
 dc-1-ldap
@@ -42,6 +61,12 @@ dc-1-ui
 dc-1-rmp
 dc-1-qpid
 dc-1-pg
+
+[planet:children]
+dc-1
+
+[dc-1:children]
+dc-1-edge
 
 [edge:children]
 dc-1-edge
@@ -51,9 +76,6 @@ dc-1-ms
 
 [ui:children]
 dc-1-ui
-
-[dc-1-ui:children]
-dc-1-ms
 
 [ldap:children]
 dc-1-ldap
@@ -69,10 +91,3 @@ dc-1-qpid
 
 [pg:children]
 dc-1-pg
-
-[dc-1-pg:children]
-dc-1-pgmaster
-
-[pgmaster:children]
-dc-1-pgmaster
-

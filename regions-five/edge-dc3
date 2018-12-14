@@ -1,13 +1,16 @@
+# Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-3-ds]
 cf-01[0:2] zk_observer=true
 
+# Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-3-rmp]
 cf-01[1:2]
 
+# Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-3-qpid]
 cf-01[3:4]
 
-# Group mappings for the nodes indicated above
+# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
 [dc-3-edge:children]
 dc-3-ds
 dc-3-rmp

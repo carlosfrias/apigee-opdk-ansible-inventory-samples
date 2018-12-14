@@ -5,7 +5,6 @@ cf-00[0:2]
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
 # cf-003 zk_observer=true
 
-
 # This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
 # cf-001 rack=1,1
 # cf-002 rack=1,2
@@ -31,13 +30,27 @@ cf-00[1:2]
 [dc-1-qpid]
 cf-00[3:4]
 
-# Inventory Group for nodes that fulfill PostgresSQL Master Roles
+# Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
 [dc-1-pgmaster]
 cf-003
 
-# Inventory Group for nodes that fulfill PostgresSQL Standby Roles
+# Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
 [dc-1-pgstandby]
 cf-004
+
+# Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
+# If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
+[dc-1-pg:children]
+dc-1-pgmaster
+dc-1-pgstandby
+
+# Inventory Group must be removed if no Postgres Master is defined
+[pgmaster:children]
+dc-1-pgmaster
+
+# Inventory Group must be removed if no Postgres Standby is defined
+[pgstandby:children]
+dc-1-pgstandby
 
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
 [dc-1-edge:children]
@@ -64,14 +77,8 @@ dc-1-ms
 [ui:children]
 dc-1-ui
 
-[dc-1-ui:children]
-dc-1-ms
-
 [ldap:children]
 dc-1-ldap
-
-[dc-1-ldap:children]
-dc-1-ms
 
 [ds:children]
 dc-1-ds
@@ -84,13 +91,3 @@ dc-1-qpid
 
 [pg:children]
 dc-1-pg
-
-[dc-1-pg:children]
-dc-1-pgmaster
-dc-1-pgstandby
-
-[pgmaster:children]
-dc-1-pgmaster
-
-[pgstandby:children]
-dc-1-pgstandby

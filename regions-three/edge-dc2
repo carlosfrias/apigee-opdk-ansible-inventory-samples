@@ -1,29 +1,58 @@
+# Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-2-ds]
-cf-00[5:7]
-cf-007 zk_observer=true
+cf-00[0:2]
 
+# This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
+# cf-003 zk_observer=true
+
+# This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
+# cf-001 rack=1,1
+# cf-002 rack=1,2
+# cf-003 rack=1,3
+
+# Inventory Group for nodes that fulfill Management Server Roles
 [dc-2-ms]
-cf-005
+cf-000
 
+# Inventory Group for nodes that fulfill LDAP Roles
 [dc-2-ldap]
-cf-005
+cf-000
 
+# Inventory Group for nodes that fulfill UI Roles
 [dc-2-ui]
-cf-005
+cf-000
 
+# Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-2-rmp]
-cf-00[6:7]
+cf-00[1:2]
 
+# Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-2-qpid]
-cf-00[8:9]
+cf-00[3:4]
 
+# Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
+[dc-2-pgmaster]
+cf-003
+
+# Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
 [dc-2-pgstandby]
-cf-009
+cf-004
 
+# Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
+# If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
 [dc-2-pg:children]
+dc-2-pgmaster
 dc-2-pgstandby
 
-# Group mappings for the nodes indicated above
+# Inventory Group must be removed if no Postgres Master is defined
+[pgmaster:children]
+dc-2-pgmaster
+
+# Inventory Group must be removed if no Postgres Standby is defined
+[pgstandby:children]
+dc-2-pgstandby
+
+# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
 [dc-2-edge:children]
 dc-2-ds
 dc-2-ms
@@ -33,23 +62,20 @@ dc-2-rmp
 dc-2-qpid
 dc-2-pg
 
-[edge:children]
-dc-2-edge
+[planet:children]
+dc-2
 
 [dc-2:children]
 dc-2-edge
 
-[planet:children]
-dc-2
+[edge:children]
+dc-2-edge
 
 [ms:children]
 dc-2-ms
 
 [ui:children]
 dc-2-ui
-
-[dc-2-ui:children]
-dc-2-ms
 
 [ldap:children]
 dc-2-ldap
@@ -65,7 +91,3 @@ dc-2-qpid
 
 [pg:children]
 dc-2-pg
-
-[pgstandby:children]
-dc-2-pgstandby
-

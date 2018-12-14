@@ -16,6 +16,9 @@ inventory that will work with this Apigee OPDK Ansible framework. The following 
 * Three Regions 
 * Five Regions 
 
+## Node Roles
+Inventory files are annotated to provide guidance regarding how to indicate the different roles that
+the nodes will fufill.
 
 <!-- BEGIN Google Required Disclaimer -->
 
