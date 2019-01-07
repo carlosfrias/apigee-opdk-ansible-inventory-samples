@@ -1,0 +1,11 @@
+plugin: gcp_compute
+projects:
+  - sample-service
+auth_kind: serviceaccount
+service_account_file: /home/gcp-user/.apigee-secure/sample-service.json
+zones: 
+  - us-east1-c
+scopes:
+  - https://www.googleapis.com/auth/cloud-platform
+filters: 
+
