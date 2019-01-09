@@ -1,5 +1,6 @@
-[cfmirror]
+[mirror]
 cf-005
 
+# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 [dc-1:children]
 mirror

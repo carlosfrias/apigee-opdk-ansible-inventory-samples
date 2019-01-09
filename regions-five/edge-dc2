@@ -38,6 +38,7 @@ cf-003
 [dc-2-pgstandby]
 cf-004
 
+# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
 # If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
 [dc-2-pg:children]

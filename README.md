@@ -18,7 +18,7 @@ inventory that will work with this Apigee OPDK Ansible framework. The following 
 
 ## Node Roles
 Inventory files are annotated to provide guidance regarding how to indicate the different roles that
-the nodes will fufill.
+the nodes will fufill. Inventory semantic conventions are described [here](README-inventory-semantics.md). 
 
 <!-- BEGIN Google Required Disclaimer -->
 

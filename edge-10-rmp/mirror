@@ -2,6 +2,7 @@
 [mirror]
 cf-010
 
+# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
 [dc-1:children]
 mirror
