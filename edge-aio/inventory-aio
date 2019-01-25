@@ -23,6 +23,12 @@ aio
 [dc-1-ms:children]
 aio
 
+[dc-1-ldap:children]
+aio
+
+[ldap:children]
+aio
+
 [ui:children]
 aio
 
