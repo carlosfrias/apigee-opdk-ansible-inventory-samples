@@ -6,9 +6,9 @@ cf-000
 # cf-003 zk_observer=true
 
 # This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
-# cf-001 rack=1,1
-# cf-002 rack=1,2
-# cf-003 rack=1,3
+# cf-001 rack=1
+# cf-002 rack=2
+# cf-003 rack=3
 
 # Inventory Group for nodes that fulfill Management Server Roles
 [dc-1-ms]

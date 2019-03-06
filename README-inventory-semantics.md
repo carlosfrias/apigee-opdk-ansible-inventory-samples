@@ -103,7 +103,7 @@ for managing itself when the Cassandra ring is distributed across several availa
 set the variable rack for each member of the Cassandra ring with the designated location we want for
 that node in the following way:
 
-    rack=1,1
+    rack=1
 
 Please note that this follows the Cassandra rack aware configuration syntax:
 
@@ -114,7 +114,7 @@ This is a sample of a configuration of Cassandra as a node that is rackaware. As
 Cassandra/Zookeeper nodes then we can configure a node as rackaware as follows:
 
     [planet]
-    dc-1-n1 rack=1,1
+    dc-1-n1 rack=1
     dc-1-n2 rack=2,1
     dc-1-n3 rack=3,1
 
