@@ -1,6 +1,6 @@
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
-cf-000
+cf-000 
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
 # cf-003 zk_observer=true
