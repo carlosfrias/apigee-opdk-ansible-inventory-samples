@@ -1,0 +1,34 @@
+plugin: gcp_compute
+projects:
+  - sandbox-173316
+auth_kind: serviceaccount
+service_account_file: ~/.apigee-secure/sandbox-1f5fb288d552.json
+regions:
+  - us-central1
+zones:
+  - us-central1-a
+scopes:
+  - www.googleapis.com/auth/compute
+keyed_groups:
+  - key: zone
+filters: []
+groups:
+  ds: "'ds' in name"
+  ms: "'ms' in namne"
+  ldap: "'ldap' in name"
+  rmp: "'rmp' in name"
+  qpid: "'qpid' in name"
+  pg: "'pg' in name"
+  pgmaster: "'pgmaster' in name"
+  pgstandby: "'pgstandby' in name"
+  edge: "'edge' in name"
+  dc-1: "'dc-1' in name"
+  dc-1-ds: "'dc-1-ds' in name"
+  dc-1-ms: "'dc-1-ms' in name"
+  dc-1-rmp: "'dc-1-rmp' in name"
+  dc-1-qpid: "'dc-1-qpid' in name"
+  dc-1-pg: "'dc-1-pg' in name"
+  dc-1-pgmaster: "'dc-1-pgmaster' in name"
+  dc-1-pgstandby: "'dc-1-pgstandby' in name"
+  dc-1-ldap: "'dc-1-ldap' in name"
+  bastion: "'bastion' in name"
