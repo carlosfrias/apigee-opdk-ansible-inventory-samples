@@ -13,15 +13,7 @@ keyed_groups:
   - key: zone
 filters: []
 groups:
-  ds: "'ds' in name"
-  ms: "'ms' in namne"
-  ldap: "'ldap' in name"
-  rmp: "'rmp' in name"
-  qpid: "'qpid' in name"
-  pg: "'pg' in name"
-  pgmaster: "'pgmaster' in name"
-  pgstandby: "'pgstandby' in name"
-  edge: "'edge' in name"
+  apigee: "'apigee' in name"
   dc-1: "'dc-1' in name"
   dc-1-ds: "'dc-1-ds' in name"
   dc-1-ms: "'dc-1-ms' in name"
