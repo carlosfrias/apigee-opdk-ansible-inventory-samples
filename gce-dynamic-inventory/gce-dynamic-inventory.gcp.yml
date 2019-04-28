@@ -14,7 +14,7 @@ keyed_groups:
 filters: []
 groups:
   bastion: "'bastion' in name"
-  apigee: "'apigee' in name"
+  planet: "'planet' in name"
   ms: "'ms' in name"
   ds: "'ds' in name"
   ui: "'ui' in name"
