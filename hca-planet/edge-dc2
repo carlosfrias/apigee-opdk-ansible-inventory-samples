@@ -1,0 +1,90 @@
+# Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
+[dc-2-ds]
+hca-000 ansible_ssh_host=10.95.62.115
+hca-001 ansible_ssh_host=10.95.62.113
+hca-002 ansible_ssh_host=10.95.62.114
+
+# This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
+# hca-003 zk_observer=true
+
+# This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
+# hca-001 rack=1
+# hca-002 rack=2
+# hca-003 rack=3
+
+# Inventory Group for nodes that fulfill Management Server Roles
+[dc-2-ms]
+hca-000
+
+# Inventory Group for nodes that fulfill LDAP Roles
+[dc-2-ldap]
+hca-000
+
+# Inventory Group for nodes that fulfill UI Roles
+[dc-2-ui]
+hca-000
+
+# Inventory Group for nodes that fulfill Router & Message Processor Roles
+[dc-2-rmp]
+hca-00[1:2]
+
+# Inventory Group for nodes that fulfill Qpid Stack Roles
+[dc-2-qpid]
+hca-003
+hca-004 ansible_ssh_host=10.95.62.117
+
+# Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
+[dc-2-pgstandby]
+hca-003 ansible_ssh_host=10.95.62.116
+
+# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
+# Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
+# If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
+[dc-2-pg:children]
+dc-2-pgstandby
+
+# Inventory Group must be removed if no Postgres Master is defined
+
+# Inventory Group must be removed if no Postgres Standby is defined
+[pgstandby:children]
+dc-2-pgstandby
+
+# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
+[dc-2-edge:children]
+dc-2-ds
+dc-2-ms
+dc-2-ldap
+dc-2-ui
+dc-2-rmp
+dc-2-qpid
+dc-2-pg
+
+[planet:children]
+dc-2
+
+[dc-2:children]
+dc-2-edge
+
+[edge:children]
+dc-2-edge
+
+[ms:children]
+dc-2-ms
+
+[ui:children]
+dc-2-ui
+
+[ldap:children]
+dc-2-ldap
+
+[ds:children]
+dc-2-ds
+
+[rmp:children]
+dc-2-rmp
+
+[qpid:children]
+dc-2-qpid
+
+[pg:children]
+dc-2-pg
