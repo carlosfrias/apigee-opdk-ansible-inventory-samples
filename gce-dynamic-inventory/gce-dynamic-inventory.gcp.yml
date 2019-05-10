@@ -16,6 +16,7 @@ groups:
   bastion: "'bastion' in name"
   planet: "'planet' in name"
   edge: "'dc-1' in name or 'dc-2' in name or 'dc-3' in name or 'dc-4' in name or 'dc-5' in name or'dc-6' in name or 'dc-7' in name"
+  aio: "'aio' in name"
   ms: "'ms' in name"
   ds: "'ds' in name"
   ui: "'ui' in name"
