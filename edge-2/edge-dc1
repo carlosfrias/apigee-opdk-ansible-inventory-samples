@@ -1,38 +1,38 @@
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
-cf-000 
+apigee-000
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
-# cf-003 zk_observer=true
+# apigee-003 zk_observer=true
 
 # This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
-# cf-001 rack=1
-# cf-002 rack=2
-# cf-003 rack=3
+# apigee-001 rack=1
+# apigee-002 rack=2
+# apigee-003 rack=3
 
 # Inventory Group for nodes that fulfill Management Server Roles
 [dc-1-ms]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill LDAP Roles
 [dc-1-ldap]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill UI Roles
 [dc-1-ui]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-1-rmp]
-cf-00[0:1]
+apigee-00[0:1]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-1-qpid]
-cf-001
+apigee-001
 
 # Inventory Group for Postgres Role
 [dc-1-pg]
-cf-001
+apigee-001
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.

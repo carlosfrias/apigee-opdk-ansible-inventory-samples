@@ -1,14 +1,14 @@
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-4-ds]
-cf-01[5:7] zk_observer=true
+apigee-01[5:7] zk_observer=true
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-4-rmp]
-cf-01[6:7]
+apigee-01[6:7]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-4-qpid]
-cf-01[8:9]
+apigee-01[8:9]
 
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY

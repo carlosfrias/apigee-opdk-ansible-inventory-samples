@@ -1,10 +1,10 @@
 # Inventory Group for the Developer Portal UI
 [dc-1-dp-ui]
-cf-002
+apigee-002
 
 # Inventory Group for the Developer Portal database
 [dc-1-dp-db]
-cf-002
+apigee-002
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.

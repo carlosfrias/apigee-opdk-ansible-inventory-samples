@@ -1,14 +1,14 @@
 # Inventory group that indicates which nodes should have telegraf installed.
 [telegraf]
-cf-00[0:4]
+apigee-00[0:4]
 
 # Inventory group that indicates which nodes should have grafana installed.
 [grafana]
-cf-000
+apigee-000
 
 # Inventory group that indicates which nodes should have influxdb installed.
 [influxdb]
-cf-000
+apigee-000
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.

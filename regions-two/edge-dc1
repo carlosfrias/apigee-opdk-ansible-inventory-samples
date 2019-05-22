@@ -1,44 +1,44 @@
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
-cf-000 rack=1
-cf-001 rack=2
-cf-002 zk_observer=true rack=3
+apigee-000 rack=1
+apigee-001 rack=2
+apigee-002 zk_observer=true rack=3
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
-# cf-003 zk_observer=true
+# apigee-003 zk_observer=true
 
 # This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
-# cf-001 rack=1
-# cf-002 rack=2
-# cf-003 rack=3
+# apigee-001 rack=1
+# apigee-002 rack=2
+# apigee-003 rack=3
 
 # Inventory Group for nodes that fulfill Management Server Roles
 [dc-1-ms]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill LDAP Roles
 [dc-1-ldap]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill UI Roles
 [dc-1-ui]
-cf-000
+apigee-000
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-1-rmp]
-cf-00[1:2]
+apigee-00[1:2]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-1-qpid]
-cf-00[3:4]
+apigee-00[3:4]
 
 # Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
 [dc-1-pgmaster]
-cf-003
+apigee-003
 
 # Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
 [dc-1-pgstandby]
-cf-004
+apigee-004
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.

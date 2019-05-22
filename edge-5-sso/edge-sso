@@ -1,8 +1,8 @@
 [dc-1-edge-sso-ui]
-cf-000
+apigee-000
 
 [dc-1-edge-sso-pg]
-cf-006
+apigee-006
 
 [sso:children]
 dc-1-edge-sso-ui
