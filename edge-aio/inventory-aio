@@ -1,5 +1,5 @@
 [aio]
-apigee-000
+apigee-000 ansible_ssh_host=10.x.x.x
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 [edge:children]
