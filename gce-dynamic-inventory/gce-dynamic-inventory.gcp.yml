@@ -1,3 +1,4 @@
+---
 plugin: gcp_compute
 projects:
   - sandbox-173316
@@ -7,8 +8,8 @@ regions:
   - us-east1
 zones:
   - us-east1-b
-scopes:
-  - www.googleapis.com/auth/compute
+#scopes:
+#  - www.googleapis.com/auth/compute
 keyed_groups:
   - key: zone
 filters: []
