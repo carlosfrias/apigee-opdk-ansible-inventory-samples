@@ -1,4 +1,3 @@
----
 plugin: gcp_compute
 projects:
   - sandbox-173316
