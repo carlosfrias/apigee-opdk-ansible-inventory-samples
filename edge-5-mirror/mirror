@@ -1,3 +1,6 @@
+[all]
+apigee-005 ansible_ssh_host=10.x.x.x
+
 # Inventory group that indicates the Apigee Mirror Nginx deployment if used.
 [mirror]
 apigee-005
