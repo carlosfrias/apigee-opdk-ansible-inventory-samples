@@ -1,6 +1,19 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-000 ansible_ssh_host=10.142.0.2
+apigee-001 ansible_ssh_host=10.142.0.3
+apigee-002 ansible_ssh_host=10.142.0.4
+apigee-003 ansible_ssh_host=10.142.0.5
+apigee-004 ansible_ssh_host=10.142.0.6
+apigee-005 ansible_ssh_host=10.142.0.7
+apigee-006 ansible_ssh_host=10.142.0.8
+apigee-007 ansible_ssh_host=10.142.0.9
+apigee-008 ansible_ssh_host=10.142.0.10
+apigee-009 ansible_ssh_host=10.142.0.11
+
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
-apigee-00[0:2]
+apigee-00[1:3]
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
 # apigee-003 zk_observer=true
@@ -24,19 +37,19 @@ apigee-000
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
 [dc-1-rmp]
-apigee-00[1:2]
+apigee-00[4:5]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
 [dc-1-qpid]
-apigee-00[3:4]
+apigee-00[6:7]
 
 # Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
 [dc-1-pgmaster]
-apigee-003
+apigee-008
 
 # Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
 [dc-1-pgstandby]
-apigee-004
+apigee-009
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.

@@ -1,8 +1,14 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-000 ansible_ssh_host=10.142.0.2
+apigee-001 ansible_ssh_host=10.142.0.3
+apigee-002 ansible_ssh_host=10.142.0.4
+apigee-003 ansible_ssh_host=10.142.0.5
+apigee-004 ansible_ssh_host=10.142.0.6
+
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-1-ds]
-apigee-000 rack=1
-apigee-001 rack=2
-apigee-002 zk_observer=true rack=3
+apigee-00[0:2]
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
 # apigee-003 zk_observer=true

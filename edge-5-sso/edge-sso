@@ -1,3 +1,8 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-000 ansible_ssh_host=10.142.0.2
+apigee-006 ansible_ssh_host=10.142.0.6
+
 [dc-1-edge-sso-ui]
 apigee-000
 

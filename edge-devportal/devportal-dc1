@@ -1,10 +1,14 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-005 ansible_ssh_host=10.142.0.4
+
 # Inventory Group for the Developer Portal UI
 [dc-1-dp-ui]
-apigee-001
+apigee-005
 
 # Inventory Group for the Developer Portal database
 [dc-1-dp-db]
-apigee-001
+apigee-005
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.

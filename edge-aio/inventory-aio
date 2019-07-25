@@ -1,5 +1,5 @@
 [all]
-apigee-000 ansible_ssh_host=10.x.x.x
+apigee-000 ansible_ssh_host=10.142.0.2
 
 [aio]
 apigee-000
