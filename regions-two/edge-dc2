@@ -1,3 +1,11 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-005 ansible_ssh_host=10.x.x.x
+apigee-006 ansible_ssh_host=10.x.x.x
+apigee-007 ansible_ssh_host=10.x.x.x
+apigee-008 ansible_ssh_host=10.x.x.x
+apigee-009 ansible_ssh_host=10.x.x.x
+
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc-2-ds]
 apigee-00[0:2]
@@ -64,9 +72,9 @@ dc-2-qpid
 dc-2-pg
 
 [planet:children]
-dc-2
+dc-1
 
-[dc-2:children]
+[dc-1:children]
 dc-2-edge
 
 [edge:children]

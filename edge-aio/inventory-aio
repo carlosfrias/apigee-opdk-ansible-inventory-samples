@@ -1,5 +1,9 @@
-[aio]
+# Define IP addresses for list of Planet nodes
+[all]
 apigee-000 ansible_ssh_host=10.x.x.x
+
+[aio]
+apigee-000
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 [edge:children]

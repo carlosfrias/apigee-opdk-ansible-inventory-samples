@@ -1,6 +1,19 @@
+# Define IP addresses for list of Planet nodes
+[all]
+apigee-000 ansible_ssh_host=10.x.x.x
+apigee-001 ansible_ssh_host=10.x.x.x
+apigee-002 ansible_ssh_host=10.x.x.x
+apigee-003 ansible_ssh_host=10.x.x.x
+apigee-004 ansible_ssh_host=10.x.x.x
+apigee-005 ansible_ssh_host=10.x.x.x
+apigee-006 ansible_ssh_host=10.x.x.x
+apigee-007 ansible_ssh_host=10.x.x.x
+apigee-008 ansible_ssh_host=10.x.x.x
+apigee-009 ansible_ssh_host=10.x.x.x
+
 # Inventory group that indicates which nodes should have telegraf installed.
 [telegraf]
-apigee-00[0:4]
+apigee-00[0:9]
 
 # Inventory group that indicates which nodes should have grafana installed.
 [grafana]
@@ -10,8 +23,8 @@ apigee-000
 [influxdb]
 apigee-000
 
-# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
-# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
+
+# NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY# The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
 [dc-1:children]
 telegraf
 grafana
