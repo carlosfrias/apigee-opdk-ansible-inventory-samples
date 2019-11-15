@@ -1,87 +1,87 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee-000 ansible_ssh_host=10.x.x.x
-apigee-001 ansible_ssh_host=10.x.x.x
+apigee_000 ansible_ssh_host=10.x.x.x
+apigee_001 ansible_ssh_host=10.x.x.x
 
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
-[dc-1-ds]
-apigee-000
+[dc_1_ds]
+apigee_000
 
 # Inventory Group for nodes that fulfill Management Server Roles
-[dc-1-ms]
-apigee-000
+[dc_1_ms]
+apigee_000
 
 # Inventory Group for nodes that fulfill LDAP Roles
-[dc-1-ldap]
-apigee-000
+[dc_1_ldap]
+apigee_000
 
 # Inventory Group for nodes that fulfill UI Roles
-[dc-1-ui]
-apigee-000
+[dc_1_ui]
+apigee_000
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
-[dc-1-rmp]
-apigee-00[0:1]
+[dc_1_rmp]
+apigee_00[0:1]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
-[dc-1-qpid]
-apigee-001
+[dc_1_qpid]
+apigee_001
 
 # Inventory Group for Postgres Role
-[dc-1-pg]
-apigee-001
+[dc_1_pg]
+apigee_001
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
-[dc-1-edge:children]
-dc-1-ds
-dc-1-ms
-dc-1-ldap
-dc-1-ui
-dc-1-rmp
-dc-1-qpid
-dc-1-pg
+[dc_1_edge:children]
+dc_1_ds
+dc_1_ms
+dc_1_ldap
+dc_1_ui
+dc_1_rmp
+dc_1_qpid
+dc_1_pg
 
 [planet:children]
-dc-1
+dc_1
 
-[dc-1:children]
-dc-1-edge
-dc-1-ds
-dc-1-ms
-dc-1-ldap
-dc-1-ui
-dc-1-rmp
-dc-1-qpid
-dc-1-pg
+[dc_1:children]
+dc_1_edge
+dc_1_ds
+dc_1_ms
+dc_1_ldap
+dc_1_ui
+dc_1_rmp
+dc_1_qpid
+dc_1_pg
 
 [edge:children]
-dc-1-edge
+dc_1_edge
 
 [ms:children]
-dc-1-ms
+dc_1_ms
 
 [ui:children]
-dc-1-ui
+dc_1_ui
 
-[dc-1-ui:children]
-dc-1-ms
+[dc_1_ui:children]
+dc_1_ms
 
 [ldap:children]
-dc-1-ldap
+dc_1_ldap
 
-[dc-1-ldap:children]
-dc-1-ms
+[dc_1_ldap:children]
+dc_1_ms
 
 [ds:children]
-dc-1-ds
+dc_1_ds
 
 [rmp:children]
-dc-1-rmp
+dc_1_rmp
 
 [qpid:children]
-dc-1-qpid
+dc_1_qpid
 
 [pg:children]
-dc-1-pg
+dc_1_pg
 

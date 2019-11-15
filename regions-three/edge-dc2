@@ -1,102 +1,102 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee-005 ansible_ssh_host=10.x.x.x
-apigee-006 ansible_ssh_host=10.x.x.x
-apigee-007 ansible_ssh_host=10.x.x.x
-apigee-008 ansible_ssh_host=10.x.x.x
-apigee-009 ansible_ssh_host=10.x.x.x
+apigee_005 ansible_ssh_host=10.x.x.x
+apigee_006 ansible_ssh_host=10.x.x.x
+apigee_007 ansible_ssh_host=10.x.x.x
+apigee_008 ansible_ssh_host=10.x.x.x
+apigee_009 ansible_ssh_host=10.x.x.x
 
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
-[dc-2-ds]
-apigee-00[0:2]
+[dc_2_ds]
+apigee_00[0:2]
 
 # This attribute is used to set a Zookeeper node as an observer. Repeat for each Zookeeper node that should be an observer
-# apigee-003 zk_observer=true
+# apigee_003 zk_observer=true
 
 # This attribute is used to set a Cassandra node with a rack aware setting. Please indicate for each Cassandra node that requires custom settings.
-# apigee-001 rack=1
-# apigee-002 rack=2
-# apigee-003 rack=3
+# apigee_001 rack=1
+# apigee_002 rack=2
+# apigee_003 rack=3
 
 # Inventory Group for nodes that fulfill Management Server Roles
-[dc-2-ms]
-apigee-000
+[dc_2_ms]
+apigee_000
 
 # Inventory Group for nodes that fulfill LDAP Roles
-[dc-2-ldap]
-apigee-000
+[dc_2_ldap]
+apigee_000
 
 # Inventory Group for nodes that fulfill UI Roles
-[dc-2-ui]
-apigee-000
+[dc_2_ui]
+apigee_000
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
-[dc-2-rmp]
-apigee-00[1:2]
+[dc_2_rmp]
+apigee_00[1:2]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
-[dc-2-qpid]
-apigee-00[3:4]
+[dc_2_qpid]
+apigee_00[3:4]
 
 # Inventory Group for nodes that fulfill PostgresSQL Master Roles, if a Master is defined
-[dc-2-pgmaster]
-apigee-003
+[dc_2_pgmaster]
+apigee_003
 
 # Inventory Group for nodes that fulfill PostgresSQL Standby Roles, if a Standby is defined
-[dc-2-pgstandby]
-apigee-004
+[dc_2_pgstandby]
+apigee_004
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # Inventory Group for Postgres in data center, May need to be modified if no Postgres Master or Standby defined.
 # If no Postgres Master nor Standby is defined then this must indicates the Postgres node.
-[dc-2-pg:children]
-dc-2-pgmaster
-dc-2-pgstandby
+[dc_2_pg:children]
+dc_2_pgmaster
+dc_2_pgstandby
 
 # Inventory Group must be removed if no Postgres Master is defined
 [pgmaster:children]
-dc-2-pgmaster
+dc_2_pgmaster
 
 # Inventory Group must be removed if no Postgres Standby is defined
 [pgstandby:children]
-dc-2-pgstandby
+dc_2_pgstandby
 
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
-[dc-2-edge:children]
-dc-2-ds
-dc-2-ms
-dc-2-ldap
-dc-2-ui
-dc-2-rmp
-dc-2-qpid
-dc-2-pg
+[dc_2_edge:children]
+dc_2_ds
+dc_2_ms
+dc_2_ldap
+dc_2_ui
+dc_2_rmp
+dc_2_qpid
+dc_2_pg
 
 [planet:children]
-dc-1
+dc_1
 
-[dc-1:children]
-dc-2-edge
+[dc_1:children]
+dc_2_edge
 
 [edge:children]
-dc-2-edge
+dc_2_edge
 
 [ms:children]
-dc-2-ms
+dc_2_ms
 
 [ui:children]
-dc-2-ui
+dc_2_ui
 
 [ldap:children]
-dc-2-ldap
+dc_2_ldap
 
 [ds:children]
-dc-2-ds
+dc_2_ds
 
 [rmp:children]
-dc-2-rmp
+dc_2_rmp
 
 [qpid:children]
-dc-2-qpid
+dc_2_qpid
 
 [pg:children]
-dc-2-pg
+dc_2_pg

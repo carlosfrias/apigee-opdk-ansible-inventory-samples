@@ -1,11 +1,11 @@
 [all]
-apigee-005 ansible_ssh_host=10.x.x.x
+apigee_005 ansible_ssh_host=10.x.x.x
 
 # Inventory group that indicates the Apigee Mirror Nginx deployment if used.
 [mirror]
-apigee-005
+apigee_005
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
-[dc-1:children]
+[dc_1:children]
 mirror

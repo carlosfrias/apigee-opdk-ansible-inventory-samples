@@ -1,45 +1,45 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee-015 ansible_ssh_host=10.x.x.x
-apigee-016 ansible_ssh_host=10.x.x.x
-apigee-017 ansible_ssh_host=10.x.x.x
-apigee-018 ansible_ssh_host=10.x.x.x
-apigee-019 ansible_ssh_host=10.x.x.x
+apigee_015 ansible_ssh_host=10.x.x.x
+apigee_016 ansible_ssh_host=10.x.x.x
+apigee_017 ansible_ssh_host=10.x.x.x
+apigee_018 ansible_ssh_host=10.x.x.x
+apigee_019 ansible_ssh_host=10.x.x.x
 
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
-[dc-4-ds]
-apigee-01[5:7] zk_observer=true
+[dc_4_ds]
+apigee_01[5:7] zk_observer=true
 
 # Inventory Group for nodes that fulfill Router & Message Processor Roles
-[dc-4-rmp]
-apigee-01[6:7]
+[dc_4_rmp]
+apigee_01[6:7]
 
 # Inventory Group for nodes that fulfill Qpid Stack Roles
-[dc-4-qpid]
-apigee-01[8:9]
+[dc_4_qpid]
+apigee_01[8:9]
 
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 # The remainder of these inventory Group definitions are used by the playbooks and should not require modifications.
-[dc-4-edge:children]
-dc-4-ds
-dc-4-rmp
-dc-4-qpid
+[dc_4_edge:children]
+dc_4_ds
+dc_4_rmp
+dc_4_qpid
 
 [edge:children]
-dc-4-edge
+dc_4_edge
 
-[dc-4:children]
-dc-4-edge
+[dc_4:children]
+dc_4_edge
 
 [planet:children]
-dc-4
+dc_4
 
 [ds:children]
-dc-4-ds
+dc_4_ds
 
 [rmp:children]
-dc-4-rmp
+dc_4_rmp
 
 [qpid:children]
-dc-4-qpid
+dc_4_qpid

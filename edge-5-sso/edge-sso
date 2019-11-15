@@ -1,22 +1,22 @@
 [all]
-apigee-000 ansible_ssh_host=10.x.x.x
-apigee-006 ansible_ssh_host=10.x.x.x
+apigee_000 ansible_ssh_host=10.x.x.x
+apigee_006 ansible_ssh_host=10.x.x.x
 
-[dc-1-edge-sso-ui]
-apigee-000
+[dc_1_edge_sso_ui]
+apigee_000
 
-[dc-1-edge-sso-pg]
-apigee-006
+[dc_1_edge_sso_pg]
+apigee_006
 
 [sso:children]
-dc-1-edge-sso-ui
-dc-1-edge-sso-pg
+dc_1_edge_sso_ui
+dc_1_edge_sso_pg
 
-[sso-ui:children]
-dc-1-edge-sso-ui
+[sso_ui:children]
+dc_1_edge_sso_ui
 
-[sso-pg:children]
-dc-1-edge-sso-pg
+[sso_pg:children]
+dc_1_edge_sso_pg
 
-[dc-1:children]
+[dc_1:children]
 sso

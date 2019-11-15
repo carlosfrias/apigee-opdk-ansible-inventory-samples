@@ -1,33 +1,33 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee-000 ansible_ssh_host=10.x.x.x
+apigee_000 ansible_ssh_host=10.x.x.x
 
 [aio]
-apigee-000
+apigee_000
 
 # NO MODIFICATIONS BELOW THIS LINE ARE NECESSARY
 [edge:children]
 aio
 
 [planet:children]
-dc-1
+dc_1
 
-[dc-1:children]
+[dc_1:children]
 aio
 
 [ds:children]
-dc-1-ds
+dc_1_ds
 
-[dc-1-ds:children]
+[dc_1_ds:children]
 aio
 
 [ms:children]
 aio
 
-[dc-1-ms:children]
+[dc_1_ms:children]
 aio
 
-[dc-1-ldap:children]
+[dc_1_ldap:children]
 aio
 
 [ldap:children]
@@ -39,18 +39,18 @@ aio
 [rmp:children]
 aio
 
-[dc-1-rmp:children]
+[dc_1_rmp:children]
 aio
 
 [qpid:children]
-dc-1-qpid
+dc_1_qpid
 
-[dc-1-qpid:children]
+[dc_1_qpid:children]
 aio
 
 [pg:children]
 aio
 
-[dc-1-pg:children]
+[dc_1_pg:children]
 aio
 
