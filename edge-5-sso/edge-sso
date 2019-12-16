@@ -1,6 +1,6 @@
 [all]
-apigee_000 ansible_ssh_host=10.x.x.x
-apigee_006 ansible_ssh_host=10.x.x.x
+apigee_000 ansible_host=10.x.x.x
+apigee_006 ansible_host=10.x.x.x
 
 [dc_1_edge_sso_ui]
 apigee_000

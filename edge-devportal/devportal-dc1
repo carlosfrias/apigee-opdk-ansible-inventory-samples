@@ -1,6 +1,6 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee_005 ansible_ssh_host=10.142.0.4
+apigee_005 ansible_host=10.142.0.4
 
 # Inventory Group for the Developer Portal UI
 [dc_1_dp_ui]

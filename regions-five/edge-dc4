@@ -1,10 +1,10 @@
 # Define IP addresses for list of Planet nodes
 [all]
-apigee_015 ansible_ssh_host=10.x.x.x
-apigee_016 ansible_ssh_host=10.x.x.x
-apigee_017 ansible_ssh_host=10.x.x.x
-apigee_018 ansible_ssh_host=10.x.x.x
-apigee_019 ansible_ssh_host=10.x.x.x
+apigee_015 ansible_host=10.x.x.x
+apigee_016 ansible_host=10.x.x.x
+apigee_017 ansible_host=10.x.x.x
+apigee_018 ansible_host=10.x.x.x
+apigee_019 ansible_host=10.x.x.x
 
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
 [dc_4_ds]

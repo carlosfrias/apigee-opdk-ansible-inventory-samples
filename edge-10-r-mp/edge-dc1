@@ -1,9 +1,9 @@
 [all]
-apigee_000 ansible_ssh_host=10.x.x.x
-apigee_001 ansible_ssh_host=10.x.x.x
-apigee_002 ansible_ssh_host=10.x.x.x
-apigee_003 ansible_ssh_host=10.x.x.x
-apigee_004 ansible_ssh_host=10.x.x.x
+apigee_000 ansible_host=10.x.x.x
+apigee_001 ansible_host=10.x.x.x
+apigee_002 ansible_host=10.x.x.x
+apigee_003 ansible_host=10.x.x.x
+apigee_004 ansible_host=10.x.x.x
 
 
 # Inventory Group for nodes that will fulfill Cassandra and Zookeeper Roles
