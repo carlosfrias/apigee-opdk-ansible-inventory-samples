@@ -26,7 +26,7 @@ groups:
   edge: "'dc-1' in name or 'dc-2' in name or 'dc-3' in name or 'dc-4' in name or 'dc-5' in name or'dc-6' in name or 'dc-7' in name or 'aio' in name"
   ms: "'ms' in name or 'aio' in name"
   ds: "'ds' in name or 'aio' in name"
-  ui: "'ui' in name or 'aio' in name"
+  ui: "'dc-1-ui' in name or 'dc-2-ui' in name or 'aio' in name"
   ldap: "'ldap' in name or 'aio' in name"
   rmp: "'rmp' in name or 'aio' in name"
   router: "'rmp' in name or 'aio' in name"
